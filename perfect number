@@ -1,0 +1,13 @@
+import java.util.Scanner;
+class Main {
+ public static void main(String[] smart) {
+  Scanner obj = new Scanner(System.in);
+  int n = obj.nextInt() ;
+  int sum = 0 , temp = n ; 
+  while( n > 0) {
+    sum += (n % 10) ; 
+    n /= 10 ; 
+  }
+  System.out.print((temp % sum == 0 )?"Yes":"No");
+  }
+}
