@@ -1,0 +1,18 @@
+import java.util.Scanner;
+class Main {
+public static void main(String[] smart) {
+  Scanner obj = new Scanner(System.in);
+  int n = obj.nextInt() ; 
+  int temp = n , count = 0 , power = 1 , answer = 0; 
+  for(;temp > 0 ; count++ , temp/=10);
+      temp = n ; 
+    while(temp > 0) { 
+      for(int i=1;i<=count;i++)  
+      power *= (temp%10) ;  
+      answer += power ;  
+      power = 1 ; count--;
+      temp/=10; 
+    }
+    System.out.print((n==answer)?"Yes":"No");
+  }
+}
